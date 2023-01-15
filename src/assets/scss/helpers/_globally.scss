@@ -1,0 +1,14 @@
+// border-radius
+.is-rounded-0 {
+  border-radius: 0 !important;
+}
+
+.is-rounded-pill {
+  border-radius: $border-radius-pill !important;
+}
+
+// display
+.is-block {
+  display: block;
+  width: 100%;
+}

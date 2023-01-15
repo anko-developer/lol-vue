@@ -1,0 +1,211 @@
+// Variables
+
+// Color system
+// scss-docs-start gray-color-variables
+$white:    #fff !default;
+$gray-20:  #f8f8f8 !default;
+$gray-40:  #f6f6f6 !default;
+$gray-60:  #f1f1f1 !default;
+$gray-80:  #e9e9e9 !default;
+$gray-100: #e1e1e1 !default;
+$gray-120: #dbdbdb !default;
+$gray-140: #d4d4d4 !default;
+$gray-160: #ccc !default;
+$gray-180: #bcbcbc !default;
+$gray-200: #9a9a9a !default;
+$gray-220: #808080 !default;
+$gray-240: #707070 !default;
+$gray-260: #666 !default;
+$gray-280: #333 !default;
+$black:    #000 !default;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start gray-colors-map
+$grays: (
+  "gray20":   $gray-20,
+  "gray40":   $gray-40,
+  "gray60":   $gray-60,
+  "gray80":   $gray-80,
+  "gray100":  $gray-100,
+  "gray120":  $gray-120,
+  "gray140":  $gray-140,
+  "gray160":  $gray-160,
+  "gray180":  $gray-180,
+  "gray200":  $gray-200,
+  "gray220":  $gray-220,
+  "gray240":  $gray-240,
+  "gray260":  $gray-260,
+  "gray280":  $gray-280
+) !default;
+// scss-docs-end gray-colors-map
+
+// scss-docs-start blue-gray-color-variables
+$bluegray-100:  #99A8B5 !default;
+$bluegray-200:  #EEF2F5 !default;
+$bluegray-300:  #F2F5F6 !default;
+// scss-docs-end blue-gray-color-variables
+
+// scss-docs-start gray-colors-map
+$bluegrays: (
+  "bluegray100":  $bluegray-100,
+  "bluegray200":  $bluegray-200,
+  "bluegray300":  $bluegray-300
+) !default;
+// scss-docs-end gray-colors-map
+
+// scss-docs-start point-color-variables
+$point-01:  #d40000 !default;
+$point-02:  #f9b037 !default;
+$point-03:  #00d5a2 !default;
+$point-04:  #359dff !default;
+$point-05:  #9e5fff !default;
+$point-06:  #ef0000 !default;
+$point-07:  #F8F1F1 !default;
+// scss-docs-end point-color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  "black":    $black,
+  "white":    $white,
+  "point01":  $point-01,
+  "point02":  $point-02,
+  "point03":  $point-03,
+  "point04":  $point-04,
+  "point05":  $point-05,
+  "point06":  $point-06,
+  "point07":  $point-07,
+) !default;
+// scss-docs-end colors-map
+
+// scss-docs-start theme-color-variables
+$primary:  #151515 !default;
+$secondary:#476C97 !default;
+$warning:    $point-01 !default;
+$success:    $point-04 !default;
+$danger:     $point-06 !default;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "danger": $danger,
+  "warning": $warning
+) !default;
+// scss-docs-end theme-colors-map
+
+// scss-docs-start light theme-colors-map
+$light-theme-colors: (
+  "primary": $secondary,  
+  "secondary": $primary,
+) !default;
+// scss-docs-end light theme-colors-map
+
+
+// Prefix for :root CSS variables
+$variable-prefix:             ui- !default;
+$prefix:                      $variable-prefix !default;
+
+
+// Font
+$font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Roboto, "Malgun Gothic", "맑은 고딕", Dotum, "돋움", sans-serif !default;
+
+$font-size-base:              1.4rem !default;
+
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-semibold:        600 !default;
+$font-weight-bold:            700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+$line-height-base:            1.42 !default;
+
+$h1-font-size:                $font-size-base * 2 !default;
+$h2-font-size:                $font-size-base * 1.428 !default;
+$h3-font-size:                $font-size-base * 1.214 !default;
+$h4-font-size:                $font-size-base * 1.142 !default;
+$h5-font-size:                $font-size-base * 1.071 !default;
+$h6-font-size:                $font-size-base !default;
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+) !default;
+// scss-docs-end font-sizes
+
+// scss-docs-start headings-variables
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+// scss-docs-end headings-variables
+
+
+// Options
+$enable-grid-classes:         true !default;
+$enable-negative-margins:     false !default;
+// $enable-container-classes:    true !default;
+$enable-cssgrid:              false !default;
+$enable-important-utilities:  true !default;
+
+
+// Grid columns
+$grid-columns:                12 !default;
+$grid-gutter-width:           2rem !default;
+$grid-row-columns:            6 !default;
+
+
+// Grid breakpoints
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+// scss-docs-end grid-breakpoints
+
+
+// Spacing
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .2,
+  2: $spacer * .4,
+  3: $spacer * .6,
+  4: $spacer * .8,
+  5: $spacer,
+  6: $spacer * 1.2,
+  7: $spacer * 1.4,
+  8: $spacer * 1.6,
+  9: $spacer * 1.8,
+  10: $spacer * 2,
+) !default;
+// scss-docs-end spacer-variables-maps
+
+
+// Position
+// scss-docs-start position-map
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%
+) !default;
+// scss-docs-end position-map
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+// scss-docs-start border-radius-variables
+$border-radius-pill:          5rem !default;
+// scss-docs-end border-radius-variables

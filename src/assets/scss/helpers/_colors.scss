@@ -1,0 +1,25 @@
+// Colors
+@each $color, $value in $colors {
+  .is-#{$color} {
+    color: $value;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .is-#{$color} {
+    color: $value;
+  }
+}
+
+// backgroundColor
+@each $color, $value in $colors {
+  .is-bg#{$color} {
+    background-color: $value;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .is-bg#{$color} {
+    background-color: $value;
+  }
+}
