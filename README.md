@@ -1,1 +1,1 @@
-# lol-vue
+# league of legends
