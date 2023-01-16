@@ -10,7 +10,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import { getName } from '@/api/summoner';
+import { getInfo } from '@/api/summoner';
 
 const summonerName = ref('');
 const yourName = ref('');
@@ -18,7 +18,7 @@ const yourName = ref('');
 const myName = async name => {
 	try {
 		// const response = await getName(name);
-		const { data } = await getName(name);
+		const { data } = await getInfo(name);
 		console.log(data);
 		yourName.value = data.name;
 		summonerName.value = '';

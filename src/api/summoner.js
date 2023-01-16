@@ -1,9 +1,15 @@
 import { mwgg } from './index';
 
-function getName(summonerName) {
+/**
+ *
+ * @param {string} summonerName 소환사 이름
+ * @param {string} key API Key
+ * @returns 소환사 정보
+ */
+function getInfo(summonerName, key) {
 	return mwgg.get(
-		`summoner/v4/summoners/by-name/${summonerName}?api_key=RGAPI-b56abfc9-1c4e-460e-af44-ebb9a3fba21b`,
+		`summoner/v4/summoners/by-name/${summonerName}?api_key=${key}`,
 	);
 }
 
-export { getName };
+export { getInfo };
