@@ -1,17 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import MwggMain from '@/views/MwggMain.vue';
-import MwggDetail from '@/views/MwggDetail.vue';
+// import MwggMain from '@/views/MwggMain.vue';
+// import MwggDetail from '@/views/MwggDetail.vue';
 
 const routes = [
 	{
 		path: '/',
 		name: 'Main',
-		component: MwggMain,
+		component: () => import('@/views/MwggMain.vue'),
 	},
 	{
 		path: '/detail',
 		name: 'Detail',
-		component: MwggDetail,
+		component: () => import('@/views/MwggDetail.vue'),
+	},
+	{
+		path: '/:pathMatch(.*)*',
+		name: 'NotFound',
+		component: () => import('@/views/404Page.vue'),
 	},
 ];
 
