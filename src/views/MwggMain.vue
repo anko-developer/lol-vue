@@ -1,5 +1,5 @@
 <template>
-	<form @submit.prevent="myName(summonerName)">
+	<form @submit.prevent="getInfo(summonerName)">
 		<div class="row">
 			<input
 				class="col-12 form-control mb-2"
@@ -17,24 +17,32 @@
 
 <script setup>
 import { ref } from 'vue';
-import { getInfo } from '@/api/summoner';
 import { storeToRefs } from 'pinia';
+import { useRouter } from 'vue-router';
+import { userInfo } from '@/api/summoner';
 import { userSummonerStore } from '@/stores/summoner';
 
 const summonerName = ref('');
 const apiKey = ref('');
+const router = useRouter();
 const store = userSummonerStore();
-const { key, nick, level } = storeToRefs(store);
+const { key, id, accountId, puuid, nick, level } = storeToRefs(store);
 
-const myName = async name => {
+const getInfo = async name => {
 	try {
 		key.value = apiKey.value;
 		apiKey.value = '';
 
-		const { data } = await getInfo(name ? name : '빅웨이브');
+		const { data } = await userInfo(name ? name : '빅웨이브');
+		id.value = data.id;
+		accountId.value = data.accountId;
+		puuid.value = data.puuid;
 		nick.value = data.name;
 		level.value = data.summonerLevel;
 		summonerName.value = '';
+		router.push({
+			name: 'Detail',
+		});
 		console.log(data);
 	} catch (error) {
 		console.log(error);
