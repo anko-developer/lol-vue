@@ -9,4 +9,4 @@ function create(baseURL, options) {
 	return instance;
 }
 
-export const mwgg = create(`${import.meta.env.VITE_APP_API_URL}`);
+export const lol = create(`${import.meta.env.VITE_APP_API_URL}`);
