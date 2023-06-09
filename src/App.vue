@@ -1,11 +1,7 @@
 <template>
-	<MwggHeader></MwggHeader>
-	<MwggView></MwggView>
+	<router-view></router-view>
 </template>
 
-<script setup>
-import MwggHeader from '@/layouts/MwggHeader.vue';
-import MwggView from '@/layouts/MwggView.vue';
-</script>
+<script setup></script>
 
 <style lang="scss" scoped></style>

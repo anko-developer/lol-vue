@@ -1,11 +1,15 @@
 <template>
 	<div class="container">
 		<section class="content">
-			<router-view></router-view>
+			<slot></slot>
 		</section>
 	</div>
 </template>
 
 <script setup></script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container {
+	padding: 2rem;
+}
+</style>

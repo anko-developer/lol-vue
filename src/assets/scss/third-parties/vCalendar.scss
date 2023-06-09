@@ -1,0 +1,59 @@
+  // ----- vCalendar custom -----
+  :deep(.vc-light) {
+    //--vc-focus-ring: 0 0 0 0.1rem rgb(131, 101, 232);
+    --vc-focus-ring: transparent;
+    //--vc-day-content-hover-bg: transparent;
+  }
+
+  :deep(.vc-header) {
+    margin-top: 1.2rem;
+  }
+
+  :deep(.vc-header .vc-arrow:hover) {
+    background: transparent;
+  }
+
+  :deep(.vc-title) {
+    color: var(--t-gray01);
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  :deep(.vc-next),
+  :deep(.vc-prev) {
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  :deep(.vc-weekday) {
+    color: var(--t-gray04);
+    font-weight: 400;
+  }
+
+  :deep(.vc-day) {
+    min-height: 4rem;
+  }
+
+  :deep(.vc-day-content) {
+    padding: 1.8rem;
+    color: var(--t-gray01);
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  :deep(.vc-day-content:hover) {
+    background-color: transparent;
+    border: 0.1rem solid var(--t-primary01);
+  }
+
+  :deep(.vc-attr) {
+    --vc-dot-bg: var(--t-primary01); // 아래 점 색
+  }
+
+  :deep(.vc-dot) {
+    width: 0.3rem;
+    height: 0.3rem;
+    margin-bottom: 0.6rem;
+  }

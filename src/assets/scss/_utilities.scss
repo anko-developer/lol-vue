@@ -32,7 +32,7 @@ $utilities: map-merge(
     "margin-end": (
       responsive: true,
       property: margin-right,
-      class: me,
+      class: mr,
       values: map-merge($spacers, (auto: auto))
     ),
     "margin-bottom": (
@@ -44,8 +44,51 @@ $utilities: map-merge(
     "margin-start": (
       responsive: true,
       property: margin-left,
-      class: ms,
+      class: ml,
       values: map-merge($spacers, (auto: auto))
+    ),
+    // Negative margin utilities
+    "negative-margin": (
+      responsive: true,
+      property: margin,
+      class: m,
+      values: map-merge($negative-spacers, (auto: auto))
+    ),
+    "negative-margin-x": (
+      responsive: true,
+      property: margin-right margin-left,
+      class: mxn,
+      values: map-merge($negative-spacers, (auto: auto))
+    ),
+    "negative-margin-y": (
+      responsive: true,
+      property: margin-top margin-bottom,
+      class: myn,
+      values: map-merge($negative-spacers, (auto: auto))
+    ),
+    "negative-margin-top": (
+      responsive: true,
+      property: margin-top,
+      class: mtn,
+      values: map-merge($negative-spacers, (auto: auto))
+    ),
+    "negative-margin-end": (
+      responsive: true,
+      property: margin-right,
+      class: mrn,
+      values: map-merge($negative-spacers, (auto: auto))
+    ),
+    "negative-margin-bottom": (
+      responsive: true,
+      property: margin-bottom,
+      class: mbn,
+      values: map-merge($negative-spacers, (auto: auto))
+    ),
+    "negative-margin-start": (
+      responsive: true,
+      property: margin-left,
+      class: mln,
+      values: map-merge($negative-spacers, (auto: auto))
     ),
     // Padding utilities
     "padding": (
@@ -75,7 +118,7 @@ $utilities: map-merge(
     "padding-end": (
       responsive: true,
       property: padding-right,
-      class: pe,
+      class: pr,
       values: $spacers
     ),
     "padding-bottom": (
@@ -87,7 +130,7 @@ $utilities: map-merge(
     "padding-start": (
       responsive: true,
       property: padding-left,
-      class: ps,
+      class: pl,
       values: $spacers
     ),
     // Flex utilities
@@ -173,20 +216,6 @@ $utilities: map-merge(
         stretch: stretch,
       )
     ),
-    "order": (
-      responsive: true,
-      property: order,
-      values: (
-        first: -1,
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        last: 6,
-      ),
-    ),
     // Flex utilities Display
     "display": (
       responsive: true,
@@ -194,6 +223,79 @@ $utilities: map-merge(
       property: display,
       class: d,
       values: inline inline-block block grid table table-row table-cell flex inline-flex none
+    ),
+    // utils-color
+    "color": (
+      property: color,
+      class: text,
+      values: map-merge-multiple(
+        $theme-colors,
+        $colors,
+        $grays
+      )
+    ),
+    // utils-bg-color
+    "background-color": (
+      property: background-color,
+      class: bg,
+      values: map-merge-multiple(
+        $theme-colors,
+        $colors,
+        $grays
+      )
+    ),
+    // utils-sizing
+    "width": (
+      property: width,
+      class: w,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    ),
+    "max-width": (
+      property: max-width,
+      class: mw,
+      values: (100: 100%)
+    ),
+    "viewport-width": (
+      property: width,
+      class: vw,
+      values: (100: 100vw)
+    ),
+    "min-viewport-width": (
+      property: min-width,
+      class: min-vw,
+      values: (100: 100vw)
+    ),
+    "height": (
+      property: height,
+      class: h,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    ),
+    "max-height": (
+      property: max-height,
+      class: mh,
+      values: (100: 100%)
+    ),
+    "viewport-height": (
+      property: height,
+      class: vh,
+      values: (100: 100vh)
+    ),
+    "min-viewport-height": (
+      property: min-height,
+      class: min-vh,
+      values: (100: 100vh)
     ),
   ),
   $utilities

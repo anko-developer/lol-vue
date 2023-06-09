@@ -7,6 +7,7 @@
 }
 
 html {
+  overflow-x: hidden;
   box-sizing: border-box;
   font-size: 62.5%;
 
@@ -16,6 +17,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   overflow-wrap: break-word;
   font-family: $font-family;
   font-weight: $font-weight-base;
@@ -44,6 +46,10 @@ select,
 textarea {
   border: 0;
   font-family: $font-family;
+}
+
+em {
+  font-style: normal;
 }
 
 button,
@@ -75,6 +81,10 @@ iframe {
   border: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 // Images and content
 
 img {
@@ -83,30 +93,12 @@ img {
   vertical-align: top;
 }
 
-// Links
-
-a {
-  text-decoration: none;
-
-  // &:hover {
-  //   font-weight: $font-weight-semibold;
-  //   text-decoration: underline;
-  // }
-
-  // &:active {
-  //   color: $point-04;
-  // }
-
-  // &:visited {
-  //   color: $gray-220;
-  // }
-}
-
 // Headings
 
 @each $size, $value in $font-sizes {
   h#{$size} {
+    font-weight: $headings-font-weight;
     font-size: $value;
-    line-height: $headings-line-height;
+    // line-height: $headings-line-height;
   }
 }

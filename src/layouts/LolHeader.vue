@@ -2,34 +2,30 @@
 	<header class="header">
 		<div class="header__logo">
 			<router-link to="/">
-				<SvgImage name="opgglogo" color="#fff"></SvgImage>
+				<SvgImage name="logo"></SvgImage>
 			</router-link>
 		</div>
 	</header>
 </template>
 
-<script setup>
-import SvgImage from '@/components/SvgImage.vue';
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .header {
-	padding: 10px 14px;
-	background-color: #151515;
+	padding: 2rem 1.4rem;
+	background-color: var(--lol-gray01);
 }
 
 .header__logo {
-	width: 100px;
-
 	a {
-		// display: block;
 		vertical-align: top;
 	}
 
 	svg {
 		display: block;
-		width: 100px;
-		height: 50px;
+		width: 8rem;
+		height: 2rem;
+		fill: var(--lol-primary);
 	}
 }
 </style>

@@ -1,17 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router';
-// import MwggMain from '@/views/MwggMain.vue';
-// import MwggDetail from '@/views/MwggDetail.vue';
 
 const routes = [
 	{
 		path: '/',
 		name: 'Main',
-		component: () => import('@/views/MwggMain.vue'),
+		component: () => import('@/views/LolMain.vue'),
 	},
 	{
 		path: '/detail',
 		name: 'Detail',
-		component: () => import('@/views/MwggDetail.vue'),
+		component: () => import('@/views/LolDetail.vue'),
 	},
 	{
 		path: '/:pathMatch(.*)*',

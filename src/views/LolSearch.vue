@@ -1,18 +1,24 @@
 <template>
-	<form @submit.prevent="getInfo(summonerName)">
-		<div class="row">
-			<input
-				class="col-12 form-control mb-2"
-				type="text"
-				v-model="apiKey"
-				placeholder="API KEY를 입력해주세요."
-			/>
-			<input class="col form-control me-1" type="text" v-model="summonerName" />
-			<button class="col-auto btn btn-dark" type="submit">검색</button>
-		</div>
-	</form>
-	<p>닉네임: {{ nick }}</p>
-	<p>레벨: {{ level }}</p>
+	<LolLayout>
+		<form @submit.prevent="getInfo(summonerName)">
+			<div class="row g-0">
+				<input
+					class="col-12 form-control mb-2"
+					type="text"
+					v-model="apiKey"
+					placeholder="API KEY를 입력해주세요."
+				/>
+				<input
+					class="col form-control me-1"
+					type="text"
+					v-model="summonerName"
+				/>
+				<button class="col-auto btn btn-dark" type="submit">검색</button>
+			</div>
+		</form>
+		<p>닉네임: {{ nick }}</p>
+		<p>레벨: {{ level }}</p>
+	</LolLayout>
 </template>
 
 <script setup>
@@ -40,9 +46,9 @@ const getInfo = async name => {
 		nick.value = data.name;
 		level.value = data.summonerLevel;
 		summonerName.value = '';
-		router.push({
-			name: 'Detail',
-		});
+		// router.push({
+		// 	name: 'Detail',
+		// });
 		console.log(data);
 	} catch (error) {
 		console.log(error);
@@ -51,7 +57,12 @@ const getInfo = async name => {
 </script>
 
 <style lang="scss" scoped>
-form {
-	padding: 20px;
+.form-control {
+	padding: 1rem;
+	font-size: 1.6rem;
+}
+.btn {
+	padding: 0 1.6rem;
+	font-size: 1.6rem;
 }
 </style>
